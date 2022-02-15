@@ -1,3 +1,21 @@
+// Adding Dark Mode
+let themeToggler = document.querySelector('.theme-toggler');
+let headDark = document.querySelector('#head');
+themeToggler.onclick = () => {
+
+    themeToggler.classList.toggle('active');
+
+    if (themeToggler.classList.contains('active')) {
+        document.body.classList.add('active');
+        headDark.classList.add('ac');
+
+    } else {
+        document.body.classList.remove('active');
+        headDark.classList.remove('ac');
+    }
+
+}
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
