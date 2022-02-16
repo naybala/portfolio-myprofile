@@ -83,6 +83,7 @@
 
 /*===== BASE =====*/
 *, ::before, ::after {
+  transition: .1s linear;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -260,7 +261,7 @@ img {
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  /* color: var(--second-color); */
   font-size: 1.5rem;
   cursor: pointer;
 }
