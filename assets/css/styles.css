@@ -153,13 +153,16 @@ ul {
 
 a{
   text-decoration: none;
-
+ 
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.nav__list .nav__item .nav__link{
+  color: var(--first-color);
 }
 
 /*===== CLASS CSS ===== */
@@ -210,7 +213,10 @@ img {
   background-color:#242f3f;
   color: #Fff;
 }
-
+/* .nav__toggle .ac{
+  background-color:#242f3f;
+  color: #Fff;
+} */
 /*===== NAV =====*/
 .nav {
   height: var(--header-height);
@@ -228,18 +234,21 @@ img {
     width: 50%;
     height: 100%;
     padding: 2rem;
+   
     background-color: var(--second-color);
     transition: .5s;
   }
+ 
 }
 
 .nav__item {
   margin-bottom: var(--mb-4);
+  
 }
 
 .nav__link {
   position: relative;
- 
+  color: var(--first-color);
 }
 
 .nav__link:hover {
@@ -257,7 +266,7 @@ img {
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 .nav__toggle {
@@ -326,12 +335,32 @@ img {
 }
 
 .home__blob {
+  /* fill : rgb(44, 231, 19); */
   fill: var(--first-color);
 }
 
 .home__blob-img {
   width: 600px;
 }
+
+
+/* Changing my view bg color */
+.theme-colors{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:15px;
+}
+.theme-colors .color{
+  border-radius: 30px;
+  height:50px;
+  width:50px;
+  cursor: pointer;
+}
+.theme-colors .color:hover{
+  opacity: .5;
+}
+
 
 /*BUTTONS*/
 .button {
@@ -793,7 +822,7 @@ img {
     margin-right: auto;
   }
   .home {
-    padding: 10rem 0 2rem;
+    padding: 5rem  2rem;
   }
   .home__img {
     width: 450px;

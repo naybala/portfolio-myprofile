@@ -1,6 +1,8 @@
 // Adding Dark Mode
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
+// const nav = document.getElementById("#nav__menu");
+// console.log(nav);
 themeToggler.onclick = () => {
 
     themeToggler.classList.toggle('active');
@@ -12,10 +14,18 @@ themeToggler.onclick = () => {
     } else {
         document.body.classList.remove('active');
         headDark.classList.remove('ac');
+
     }
 
 }
 
+//Changing Bg Color Profile
+document.querySelectorAll('.theme-colors .color').forEach(color => {
+    color.onclick = () => {
+        let background = color.style.background;
+        document.querySelector(':root').style.setProperty('--first-color', background);
+    }
+});
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -60,15 +70,15 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive)
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
+const sr = scrollActive({
     origin: 'top',
     distance: '60px',
-    duration: 2000,
+    duration: 1000,
     delay: 200,
     //     reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
-sr.reveal('.home__social-icon', { interval: 200 });
-sr.reveal('.skills__data, .container .card, .contact__input', { interval: 100 });
+// sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
+// sr.reveal('.home__img, .about__subtitle', { delay: 400 });
+// sr.reveal('.home__social-icon', { interval: 200 });
+// sr.reveal('.skills__data, .container .card, .contact__input', { interval: 100 });
