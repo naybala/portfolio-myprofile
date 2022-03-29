@@ -1,20 +1,32 @@
+// Adding Theme Mode On Off
+let themeChanger = document.querySelector('.theme-changer');
+let bgContainer = document.querySelector('.bg-container');
+themeChanger.onclick = () => {
+
+    themeChanger.classList.toggle('active');
+
+    if (themeChanger.classList.contains('active')) {
+        bgContainer.classList.add('activeBg');
+
+    } else {
+        bgContainer.classList.remove('activeBg');
+    }
+}
+
+
 // Adding Dark Mode
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
 // const nav = document.getElementById("#nav__menu");
 // console.log(nav);
 themeToggler.onclick = () => {
-
     themeToggler.classList.toggle('active');
-
     if (themeToggler.classList.contains('active')) {
         document.body.classList.add('active');
         headDark.classList.add('ac');
-
     } else {
         document.body.classList.remove('active');
         headDark.classList.remove('ac');
-
     }
 
 }
@@ -26,6 +38,7 @@ document.querySelectorAll('.theme-colors .color').forEach(color => {
         document.querySelector(':root').style.setProperty('--first-color', background);
     }
 });
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -70,15 +83,15 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive)
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = scrollActive({
-    origin: 'top',
-    distance: '60px',
-    duration: 1000,
-    delay: 200,
-    //     reset: true
-});
+// const sr = scrollActive({
+//     origin: 'top',
+//     distance: '60px',
+//     duration: 1000,
+//     delay: 200,
+//     //     reset: true
+// });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
-sr.reveal('.home__img, .about__subtitle', { delay: 400 });
-sr.reveal('.home__social-icon', { interval: 200 });
-sr.reveal('.skills__data, .container .card, .contact__input', { interval: 100 });
+// sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
+// sr.reveal('.home__img, .about__subtitle', { delay: 400 });
+// sr.reveal('.home__social-icon', { interval: 200 });
+// sr.reveal('.skills__data, .container .card, .contact__input', { interval: 100 });
