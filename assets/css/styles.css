@@ -243,7 +243,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
 }
 .l-header.ac{
   background-color:#242f3f;
@@ -312,7 +312,7 @@ img {
 .active::after {
   position: absolute;
   content: '';
-  
+  width: 100%;
   height: 0.18rem;
   left: 0;
   top: 2rem;
@@ -694,7 +694,29 @@ img {
       width: 280px;
       height: 410px;
     }
+    .theme-colors{
+      gap:5px;
+    }
+    .theme-colors .color{
+      border-radius: 15px;
+      height:30px;
+      width:30px;
+      cursor: pointer;
+    }
     
+}
+@media (min-width : 371px) and (max-width :400px){
+
+  .theme-colors{
+    gap:5px;
+  }
+  .theme-colors .color{
+    border-radius: 15px;
+    height:30px;
+    width:30px;
+    cursor: pointer;
+  }
+  
 }
 
 /* ===== CONTACT =====*/
