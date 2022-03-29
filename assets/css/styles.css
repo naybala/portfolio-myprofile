@@ -100,14 +100,109 @@ body {
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
-body.active{
+body.activeDark{
   margin: 0px;
   background: #242f3f;
   color: #ffffff;
   
 }
+/* Adding Dark Mode Menu */
+#theme-open{
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+.themes-container{
+  position:fixed;
+  top:100; left:-100%;
+  background:rgb(143, 143, 150);
+  height:75vh;
+  width:350px;
+  z-index: 1000;
+  text-align: right;
+  padding:20px;
+  border-radius: 1rem;
+  transition: all 0.7s ease;
+}
+
+.themes-container.activeMenu{
+  left:0;
+}
+
+.themes-container #theme-close{
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.themes-container h3{
+  color: var(--first-color);
+  text-align: center;
+  padding:2px 0;
+  margin:20px 0;
+}
+
+.themes-container .theme-toggler{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .themes-container .theme-toggler span{
+  color: var(--first-color);
+} */
+
+.themes-container .theme-toggler .toggler{
+  height:40px;
+  width:100px;
+  border-radius: 50px;
+  background:rgb(89, 89, 95);
+  position: relative;
+  cursor: pointer;
+  margin:0 10px;
+}
+
+.themes-container .theme-toggler .toggler::before{
+  content:'';
+  position: absolute;
+  top:5px; left:5px;
+  height:28px;
+  width:28px;
+  border-radius: 50%;
+  background:rgb(233, 228, 228);
+  transition:.2s linear;
+}
+
+.themes-container .theme-toggler.activeToggle .toggler::before{
+  left:65px;
+}
+
+.themes-container .theme-colors{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:15px;
+}
+
+.themes-container .theme-colors .color{
+  border-radius: 5px;
+  height:50px;
+  width:50px;
+  cursor: pointer;
+}
+
+.themes-container .theme-colors .color:hover{
+  opacity: .5;
+}
+
+
+/* Adding Dark Mode Menu End*/
+
 /* Adding Dark Mode */
-.theme-container{
+/* .theme-container{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -172,7 +267,7 @@ body.active{
 .theme-changer.active .changer::before{
   left:25px;
   
-} 
+}  */
 
 /* Adding Dark Mode */
 
@@ -381,21 +476,23 @@ img {
 /* Changing my view bg color */
 /* .bg-container{
  opacity: 0;
- transition: all 1s ease;
+ transition: all 1s ease-in-out;
  transition-delay: 0.5s;
 }
 .activeBg{
  opacity: 1;
- 
+ transition: all 1s ease-in-out;
+ transition-delay: 0.5s;
 } */
-.bg-container{
+/* .bg-container{
   display: none;
+  
 }
 .activeBg{
   display: block;
  
-}
-.theme-colors{
+} */
+/* .theme-colors{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -409,7 +506,7 @@ img {
  }
  .theme-colors .color:hover{
    opacity: .5;
- }
+ } */
 
 
 /*BUTTONS*/

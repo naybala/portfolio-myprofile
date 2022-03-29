@@ -52,33 +52,18 @@ document.querySelectorAll('.theme-colors .color').forEach(color => {
 
 
 
-let themeChanger = document.querySelector('.theme-changer');
-let bgContainer = document.querySelector('.bg-container');
-themeChanger.onclick = () => {
-
-    themeChanger.classList.toggle('active');
-
-    if (themeChanger.classList.contains('active')) {
-        bgContainer.classList.add('activeBg');
-
-    } else {
-        bgContainer.classList.remove('activeBg');
-    }
-}
-
-
 // Adding Dark Mode
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
 // const nav = document.getElementById("#nav__menu");
 // console.log(nav);
 themeToggler.onclick = () => {
-    themeToggler.classList.toggle('active');
-    if (themeToggler.classList.contains('active')) {
-        document.body.classList.add('active');
+    themeToggler.classList.toggle('activeToggle');
+    if (themeToggler.classList.contains('activeToggle')) {
+        document.body.classList.add('activeDark');
         headDark.classList.add('ac');
     } else {
-        document.body.classList.remove('active');
+        document.body.classList.remove('activeDark');
         headDark.classList.remove('ac');
     }
 

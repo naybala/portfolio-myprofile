@@ -56,40 +56,37 @@
         
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
-                <div class="theme-container">
-                  <div class="theme-changer mb-2">
-                        <span>Change theme On</span>
-                        <span class="changer"></span>
-                        <span>Off</span>
-                       
-                    </div>
-                    <div class="theme-toggler">
-                        <span>Change mode Light</span>
-                        <span class="toggler"></span>
-                        <span>Dark</span>
-                        
-                    </div>
-                </div>
+            <div id="theme-open"><i class="fa-solid fa-angles-right"></i></div>
 
-                <div class="bg-container">
-                    <div class="theme-colors">
-                        <div class="color" style="background:#3e6ff4"></div>
-                        <div class="color" style="background:#0044fd"></div>
-                        <div class="color" style="background:#27ae60;"></div>
-                        <div class="color" style="background:#00ee63;"></div>
-                        <div class="color" style="background:#0fb9b1;"></div>
-                        <div class="color" style="background:#00fff2;"></div>
-                        <div class="color" style="background:#ceb244;"></div>
-                        <div class="color" style="background:#ffcc00;"></div>
-                        <div class="color" style="background:#ac354c;"></div>
-                        <div class="color" style="background:#ff0033;"></div>
-                        <div class="color" style="background:#e84393;"></div>
-                        <div class="color" style="background:#baee00;"></div>
-                        <div class="color" style="background:#914b6c;"></div>
-                        <div class="color" style="background:#fc07ef;"></div>
-                    </div>
-                </div>
+        <div class="themes-container">
 
+            <div id="theme-close" class="fas fa-times"></div>
+
+            <h3>switch theme</h3>
+            <div class="theme-toggler">
+                <span>light</span>
+                <span class="toggler"></span>
+                <span>dart</span>
+            </div>
+
+            <h3>pick an acent color</h3>
+            <div class="theme-colors">
+                <div class="color" style="background:#3e6ff4"></div>
+                <div class="color" style="background:#0044fd"></div>
+                <div class="color" style="background:#27ae60;"></div>
+                <div class="color" style="background:#00ee63;"></div>
+                <div class="color" style="background:#0fb9b1;"></div>
+                <div class="color" style="background:#00fff2;"></div>
+                <div class="color" style="background:#ceb244;"></div>
+                <div class="color" style="background:#ffcc00;"></div>
+                <div class="color" style="background:#ac354c;"></div>
+                <div class="color" style="background:#ff0033;"></div>
+                <div class="color" style="background:#e84393;"></div>
+                <div class="color" style="background:#baee00;"></div>
+                <div class="color" style="background:#914b6c;"></div>
+                <div class="color" style="background:#fc07ef;"></div>
+            </div>
+         </div>
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span
                             class="home__title-color">Nay Ba La</span><br> Web
@@ -753,6 +750,7 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/darkAndThemeMenu.js"></script>
         <script src="assets/aos/aos.js"></script>
         <script src="assets/aos/customAos.js"></script>
     </body>
