@@ -91,6 +91,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -102,6 +103,7 @@ body {
   overflow-x: hidden;
 }
 body.activeDark{
+  overflow-x: hidden;
   margin: 0px;
   background: #242f3f;
   color: #ffffff;
