@@ -46,6 +46,7 @@ const themeColor = document.querySelectorAll('.theme-colors .color');
 themeColor.forEach(color => {
     color.onclick = () => {
         let background = color.style.background;
+        console.log(background);
         document.querySelector(':root').style.setProperty('--first-color', background);
     }
 });
