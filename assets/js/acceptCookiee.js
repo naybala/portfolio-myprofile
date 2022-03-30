@@ -34,6 +34,7 @@ const openToastAlert = () => {
     // Attach event listener on closeButtonTag
     closeButtonTag.addEventListener("click", () => {
         localStorage.setItem("accepted", "1");
+        location.reload();
         parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
     });
 

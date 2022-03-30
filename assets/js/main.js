@@ -1,4 +1,3 @@
-// const accept = localStorage.getItem('accepted');
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -42,7 +41,9 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive)
 
 //Changing Bg Color Profile
-document.querySelectorAll('.theme-colors .color').forEach(color => {
+const themeColor = document.querySelectorAll('.theme-colors .color');
+
+themeColor.forEach(color => {
     color.onclick = () => {
         let background = color.style.background;
         document.querySelector(':root').style.setProperty('--first-color', background);
@@ -53,21 +54,56 @@ document.querySelectorAll('.theme-colors .color').forEach(color => {
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
 let cookiee = document.querySelector('#cookiee');
-// const nav = document.getElementById("#nav__menu");
-// console.log(nav);
+
 themeToggler.onclick = () => {
     themeToggler.classList.toggle('activeToggle');
     if (themeToggler.classList.contains('activeToggle')) {
         document.body.classList.add('activeDark');
         headDark.classList.add('ac');
-        cookiee.classList.add('dark')
+        cookiee.classList.add('dark');
     } else {
         document.body.classList.remove('activeDark');
         headDark.classList.remove('ac');
-        cookiee.classList.remove('dark')
+        cookiee.classList.remove('dark');
     }
 
 }
+
+const accept = localStorage.getItem('accepted');
+const dark = localStorage.getItem('dark')
+if (accept == 1) {
+    themeToggler.onclick = () => {
+        themeToggler.classList.toggle('activeToggle');
+        if (themeToggler.classList.contains('activeToggle')) {
+            document.body.classList.add('activeDark');
+            headDark.classList.add('ac');
+            cookiee.classList.add('dark');
+            localStorage.removeItem('dark', '0')
+            localStorage.setItem("dark", "1");
+        } else {
+            document.body.classList.remove('activeDark');
+            headDark.classList.remove('ac');
+            cookiee.classList.remove('dark');
+            localStorage.removeItem('dark', '1')
+            localStorage.setItem("dark", "0");
+        }
+
+    }
+
+
+
+    if (dark == 1) {
+        themeToggler.classList.toggle('activeToggle');
+        document.body.classList.add('activeDark');
+        headDark.classList.add('ac');
+        cookiee.classList.add('dark');
+    } else {
+        document.body.classList.remove('activeDark');
+        headDark.classList.remove('ac');
+        cookiee.classList.remove('dark');
+    }
+}
+
 
 
 
