@@ -22,6 +22,8 @@
         <title>Portfolio</title>
     </head>
     <body>
+         <!--===== Accept Cokkiee =====-->
+        <div class="accept-cokkiee" id="cookiee"></div>
         <!--===== HEADER =====-->
         <header class="l-header" id="head">
             <nav class="nav bd-grid">
@@ -151,9 +153,8 @@
 
                     <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img">
-                            <img src="assets/img/myFullProfile.jpg" alt="">
+                            <img src="assets/img/myFullProfile.jpg" alt="" id="gallery">
                         </div>
-
                         <div>
                             <h2 class="about__subtitle">I'am Nay Ba La</h2>
                             <p class="about__text">I was born in
@@ -168,10 +169,15 @@
                                     href="#project"> Project</a> section.
                             </p>
                         </div>
+                       
                     </div>
+                    <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                    </div>
+                    <br>
                     <div class="about__container bd-grid" data-aos="fade-left">
                         <div class="about__img">
-                            <img src="assets/img/myInfo.jpg" alt="">
+                            <img src="assets/img/myInfo.jpg" alt=""  id="gallery">
                         </div>
 
                         <div>
@@ -181,7 +187,7 @@
                                     class="text-primary">Bachelor Of
                                     Technology(2018)</span> and <span
                                     class="text-primary">Bachelor Of Engineering
-                                    (2020)</span> with stydying major of
+                                    (2020)</span> with studying major of
                                 <span class="text-primary">Electronic
                                     Communication</span>.I also got a chance of
                                 Master Of Engineering and i could not attend
@@ -190,14 +196,16 @@
                                 section.</p>
                         </div>
                     </div>
+                    <br>
                     <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img">
-                            <img src="assets/img/myInfo-2.jpg" alt="">
+                            <img src="assets/img/myInfo-2.jpg" alt=""  id="gallery">
+                           
                         </div>
-
+                      
                         <div>
                             <h2 class="about__subtitle">I'also have</h2>
-                            <p class="about__text"> - A Website Design
+                            <p class="about__text"> - A website wesign
                                 perspective. <br>
                                 - I can work in accordance with Dealine. <br>
                                 - I can work in a team and have a strong desire
@@ -207,9 +215,10 @@
                                 - I have good teamwork and communication skills.</p>
                         </div>
                     </div>
+                    <br>
                     <div class="about__container bd-grid" data-aos="fade-up">
                         <div class="about__img">
-                            <img src="assets/img/myInfo-3.jpg" alt="">
+                            <img src="assets/img/myInfo-3.jpg" alt=""  id="gallery">
                         </div>
 
                         <div>
@@ -298,19 +307,29 @@
                             <div class="skills__bar skills__ux">
                             </div>
                         </div>
-                        <div>
+                        <br>
+                        <br>
+                        <div class="mt-1">
                             <img src="assets/img/myCerti.jpg" alt=""
-                                class="skills__img img-fluid">
-
+                                class="skills__img img-fluid" id="gallery">
+                        </div>
+                        <div class="div" id="popup">
+                            <img src="" alt="" id="selectedImage">
                         </div>
                     </div>
 
                     <div>
                         <img src="assets/img/myView.jpg" alt=""
-                            class="skills__img img-fluid mt-5 mb-5">
+                            class="skills__img img-fluid mt-5 mb-5" id="gallery">
+                            <div class="div" id="popup">
+                                <img src="" alt="" id="selectedImage">
+                            </div>
                         <br><br><br>
                         <img src="assets/img/myCerti-2.jpg" alt=""
-                            class="skills__img img-fluid">
+                            class="skills__img img-fluid" id="gallery">
+                            <div class="div" id="popup">
+                                <img src="" alt="" id="selectedImage">
+                            </div>
                     </div>
                 </div>
         </section>
@@ -729,7 +748,10 @@
                         </a>
                     </div>
                 </div>
-                <img src="assets/img/Footer-Up.jpg" class="img-fluid rounded-1" alt="">
+                <img src="assets/img/Footer-Up.jpg" class="img-fluid rounded-1" alt="" id="gallery">
+                <div class="div" id="popup">
+                    <img src="" alt="" id="selectedImage">
+                </div>
             </div>
         </section>
        
@@ -751,6 +773,8 @@
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/darkAndThemeMenu.js"></script>
+        <script src="assets/js/imageView.js"></script>
+        <script src="assets/js/acceptCookiee.js"></script>
         <script src="assets/aos/aos.js"></script>
         <script src="assets/aos/customAos.js"></script>
     </body>

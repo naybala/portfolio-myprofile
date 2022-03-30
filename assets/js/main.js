@@ -1,4 +1,4 @@
-
+// const accept = localStorage.getItem('accepted');
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -49,12 +49,10 @@ document.querySelectorAll('.theme-colors .color').forEach(color => {
     }
 });
 
-
-
-
 // Adding Dark Mode
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
+let cookiee = document.querySelector('#cookiee');
 // const nav = document.getElementById("#nav__menu");
 // console.log(nav);
 themeToggler.onclick = () => {
@@ -62,12 +60,16 @@ themeToggler.onclick = () => {
     if (themeToggler.classList.contains('activeToggle')) {
         document.body.classList.add('activeDark');
         headDark.classList.add('ac');
+        cookiee.classList.add('dark')
     } else {
         document.body.classList.remove('activeDark');
         headDark.classList.remove('ac');
+        cookiee.classList.remove('dark')
     }
 
 }
+
+
 
 
 
