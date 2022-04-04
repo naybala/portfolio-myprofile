@@ -20,6 +20,8 @@ function linkAction() {
     navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -27,10 +29,10 @@ function scrollActive() {
     const scrollY = window.pageYOffset
 
     sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
+        const sectionId = current.getAttribute('id');
+        // console.log(sectionId);
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
         } else {
@@ -53,18 +55,17 @@ themeColor.forEach(color => {
 // Adding Dark Mode
 let themeToggler = document.querySelector('.theme-toggler');
 let headDark = document.querySelector('#head');
-let cookiee = document.querySelector('#cookiee');
 
 themeToggler.onclick = () => {
     themeToggler.classList.toggle('activeToggle');
     if (themeToggler.classList.contains('activeToggle')) {
         document.body.classList.add('activeDark');
         headDark.classList.add('ac');
-        cookiee.classList.add('dark');
+
     } else {
         document.body.classList.remove('activeDark');
         headDark.classList.remove('ac');
-        cookiee.classList.remove('dark');
+
     }
 
 }
